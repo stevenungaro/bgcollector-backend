@@ -36,4 +36,8 @@
 #   id_count += 1
 # end
 
-User.create!(username: "plurpee", email: "plurpee@test.com", password: "password1")
+# User.create!(username: "plurpee", email: "plurpee@test.com", password: "password1")
+
+# UserGame.create!(user_id: 1, game_id: 13)
+
+# Review.create!(user_id: 1, game_id: 13, review_text: "This game is alright", thumb_down: 0, thumb_up: 1)
