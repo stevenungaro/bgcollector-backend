@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  game_id: 1
+  review_text: MyText
+  thumb_down: 1
+  thumb_up: 1
+
+two:
+  user_id: 1
+  game_id: 1
+  review_text: MyText
+  thumb_down: 1
+  thumb_up: 1
