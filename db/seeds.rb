@@ -1,8 +1,9 @@
 # Game Seeds
 # # The algorithm below populates games using the BoardGameGeek database. It can only handle so many requests at a time.
-# id_count = 187
+# Check game database for last bgg_id pulled before seeding further
+# id_count = 905
 
-# while id_count < 201
+# while id_count < 1001
 #   gamerequest = HTTP.get("https://boardgamegeek.com/xmlapi2/thing?id=#{id_count}&type=boardgame,boardgameexpansion")
 #   response = Hash.from_xml(gamerequest).to_json
 #   data = JSON.parse(response)
@@ -33,6 +34,7 @@
 #       bgg_id: entry_bgg_id,
 #     )
 #   end
+#   sleep 2
 #   id_count += 1
 # end
 
