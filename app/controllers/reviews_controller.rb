@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
 
   def index
-    @reviews = Review.all
+    @reviews = Review.where(game_id: params[:game_id])
     render :index
   end
 
@@ -34,7 +34,7 @@ class ReviewsController < ApplicationController
       game_id: params["game_id"] || @review.game_id,
       review_text: params["review_text"] || @review.review_text,
       thumb_down: params["thumb_down"] || @review.thumb_down,
-      thumb_up: params["thumb_up"] || @review.thumb_down,
+      thumb_up: params["thumb_up"] || @review.thumb_up,
     )
     if @review.valid?
       render :show

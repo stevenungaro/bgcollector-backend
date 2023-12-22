@@ -7,7 +7,7 @@ class UserGamesController < ApplicationController
   end
 
   def show
-    @user_game = UserGame.find_by(id: params[:id])
+    @user_games = User.find_by(id: params[:id]).user_games
     render :show
   end
 
