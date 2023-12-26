@@ -2,7 +2,12 @@ class UserGamesController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
 
   def index
-    @user_games = current_user.user_games
+    # @user_games = current_user.user_games
+
+    if params[:id]
+      user = User.find_by(id: params[:id])
+      @user_games = user.user_games
+    end
     render :index
   end
 
