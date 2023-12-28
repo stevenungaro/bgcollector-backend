@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, except: [:create]
+
   def index
     @users = User.includes(:user_games, :reviews).all
     render :index

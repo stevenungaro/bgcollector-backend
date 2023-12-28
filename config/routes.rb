@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "/reviews" => "reviews#index"
   post "/reviews" => "reviews#create"
-  get "/reviews/:id" => "reviews#show"
+  get "/reviews/:game_id" => "reviews#show"
   patch "/reviews/:id" => "reviews#update"
   delete "/reviews/:id" => "reviews#destroy"
 

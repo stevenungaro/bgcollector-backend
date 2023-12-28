@@ -1,14 +1,14 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
 
+  def show
+    @review = current_user.reviews.find_by(game_id: params[:game_id])
+    render :show
+  end
+
   def index
     @reviews = Review.where(game_id: params[:game_id])
     render :index
-  end
-
-  def show
-    @review = Review.find_by(id: params[:id])
-    render :show
   end
 
   def create
