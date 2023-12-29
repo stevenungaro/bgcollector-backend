@@ -1,5 +1,5 @@
 class UserGamesController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
+  before_action :authenticate_user
 
   def index
     @user_games = current_user.user_games
